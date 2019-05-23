@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C273FBA-41ED-4BB3-8FD9-B8CF91814698}</ProjectGuid>
+    <ProjectGuid>{4E13323E-C04A-4E6B-8BAD-E775ECCB1C6D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lab5</RootNamespace>
-    <AssemblyName>Lab5</AssemblyName>
+    <RootNamespace>Laborator8</RootNamespace>
+    <AssemblyName>Laborator8</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Lab5.fibbonaci</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,11 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factorial.cs" />
-    <Compile Include="fibbonaci.cs" />
-    <Compile Include="Hanoiscs.cs" />
-    <Compile Include="MergeSort.cs" />
+    <Compile Include="CautareBinara.cs" />
+    <Compile Include="MinMaxDivideAndConquer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RidicareLaPutere.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
