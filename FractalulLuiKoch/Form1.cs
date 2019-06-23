@@ -26,7 +26,7 @@ namespace FractalulLuiKoch
      
         private void ButtonDesenare_Click(object sender, EventArgs e)
         {
-         
+            pictureBox.BackColor = Color.Black;
             float startX1, startY, startX3;
             startY = pictureBox.Height * 2 / 3;
             startX1 = pictureBox.Width * 1 / 3;
@@ -37,12 +37,11 @@ namespace FractalulLuiKoch
             startPoint2 = RotirePunct(startPoint3, startPoint1, 60f);
            
             grp.DrawPolygon(p, new PointF[] { startPoint1, startPoint2, startPoint3 });
-            grp.FillPolygon(new SolidBrush(Color.AliceBlue) , new PointF[]{ startPoint1, startPoint2, startPoint3 });
+            grp.FillPolygon(new SolidBrush(Color.LightBlue) , new PointF[]{ startPoint1, startPoint2, startPoint3 });
             Koch(startPoint1, startPoint2, startPoint3);
             PointF mij = PunctRaport(startPoint1, startPoint2, 0.5f);
             PointF mij2 = PunctRaport(startPoint1, startPoint2, 2);
-           // grp.DrawEllipse(new Pen(Color.Red, 3), mij.X, mij.Y, 3, 3);
-           // grp.DrawEllipse(new Pen(Color.Red, 3), mij2.X, mij2.Y, 3, 3);
+           
             pictureBox.Image = bmp;
         }
 
@@ -69,31 +68,25 @@ namespace FractalulLuiKoch
             return new PointF((A.X + teta * B.X) / (1 + teta), (A.Y + teta * B.Y) / (1 + teta));
 
         }
-        Pen p = new Pen(Color.Blue);
+        Pen p = new Pen(Color.LightBlue);
         public void CurbaKoch(PointF A, PointF B,int semn)
         {
-            if (Distance(A, B) > 2.5)
+            if (Distance(A, B) > 0.1f)
             {
                 PointF C = PunctRaport(A, B, 0.5f);
                 PointF D = PunctRaport(A, B, 2);
-              //  grp.DrawLine(p, A, C);
-               // grp.DrawLine(p, D, B);
+            
                 PointF E = RotirePunct(C, D,-60f*semn);
               
               grp.DrawLine(p, C, E);
               grp.DrawLine(p, D, E);
-                grp.FillPolygon(new SolidBrush(Color.AliceBlue), new PointF[] { C, D, E });
-                grp.DrawLine(new Pen(pictureBox.BackColor), C, D);
+                grp.FillPolygon(new SolidBrush(Color.LightBlue), new PointF[] { C, D, E });
+                grp.DrawLine(new Pen(Color.LightBlue), C, D);
 
                 CurbaKoch(C, E,semn);
                 CurbaKoch(D, E,-semn);
                 CurbaKoch(A, C,semn);
                 CurbaKoch(D, B,semn);
-              
-                //grp.DrawLine(new Pen(pictureBox.BackColor), A,C);
-               // grp.DrawLine(new Pen(pictureBox.BackColor), D,B);
-                //grp.DrawLine(new Pen(pictureBox.BackColor), A, B);
-
 
 
             }

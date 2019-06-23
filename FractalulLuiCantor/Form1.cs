@@ -30,6 +30,7 @@ namespace FractalulLuiCantor
         private void ButtonDesenare_Click(object sender, EventArgs e)
         {
             grp.Clear(pictureBox.BackColor);
+            //se citeste lungimea seg. intial dintr-un text box.
             int length = int.Parse(textBoxLinitial.Text);
             A = new PointF(25, 25);
             B = new PointF(A.X + length, 25);

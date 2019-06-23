@@ -24,14 +24,18 @@ namespace PortofoliuAlgoritmi
          * */
         static void Main(string[] args)
         {
-            int[] a = new int[] { 2,2,2,3,3};
-         
-            for(int i=0;i<a.Length-1;i++)
+            int[] a = new int[5];
+            Random rnd = new Random();
+            for (int i = 0; i < 5; i++)
+                a[i] = rnd.Next() % 10;
+            Console.WriteLine(string.Join(" ",a));
+            /*
+            for (int i = 0; i < a.Length - 1; i++)
             {
                 int min = a[i];
                 int pmin = i;
-                for(int j=i+1;j<a.Length;j++)
-                     if(a[j]<min)
+                for (int j = i + 1; j < a.Length; j++)
+                    if (a[j] < min)
                     {
                         min = a[j];
                         pmin = j;
@@ -40,9 +44,11 @@ namespace PortofoliuAlgoritmi
                 a[i] = a[pmin];
                 a[pmin] = aux;
             }
+            */
+            Array.Sort(a);
+            
 
 
-           
 
 
             if (a[0] == a[a.Length - 1])
@@ -56,13 +62,16 @@ namespace PortofoliuAlgoritmi
             else
                 if (a[0] == a[2] || a[1] == a[3] || a[2] == a[4])
                 Console.WriteLine("Exista trei valori identice");
-              else 
+            else
                  if (a[1] == a[2] && a[3] == a[4])
                 Console.WriteLine("Exista 2 cate doua valori identice");
             else
                 if (a[1] == a[2] ^ a[3] == a[4])
                 Console.WriteLine("Exista 2 valori identice.");
-
+            if (a[1] == a[0] + 1 && a[2] == a[1] + 1 && a[3] == a[2] + 1 && a[4] == a[3] + 1)
+                Console.WriteLine("Elementele formeaza o progresie aritmetica cu ratia 1.");
+            else
+                Console.WriteLine("Elementele nu formeaza o progresie aritmetica de ratia 1");
             Console.ReadKey();
 
 

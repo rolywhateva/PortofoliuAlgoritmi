@@ -22,16 +22,14 @@ namespace Lab3
                 Console.Write("{0}\t", a[i]);
             Console.WriteLine();
         }
-        static int[] concatenare(ref int[] a , int[] b)
+        static int[] concatenare(int[] a , int[] b)
         {
             int[] nou = new int[a.Length + b.Length];
             for (int i = 0; i < a.Length; i++)
                 nou[i] = a[i];
             for (int i = 0; i < b.Length; i++)
                 nou[a.Length+i] = b[i];
-            a = new int[nou.Length];
-            for (int i = 0; i < a.Length; i++)
-                a[i] = nou[i];
+          
             return nou;
         }
         static void Main()
@@ -40,8 +38,8 @@ namespace Lab3
             int[] b = RandomArray(4, -30,-20);
             WriteArray(a);
             WriteArray(b);
-            concatenare(ref a, b);
-            WriteArray(a);
+           int[] c = concatenare( a, b);
+            WriteArray(c);
 
 
 

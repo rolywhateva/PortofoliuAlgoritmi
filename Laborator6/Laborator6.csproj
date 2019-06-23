@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AABFED7A-52EF-4DA5-A238-7EA5F6680BCD}</ProjectGuid>
+    <ProjectGuid>{6FDF2FE1-E6A8-4BC3-99F6-E522584AB3D7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Labo4</RootNamespace>
-    <AssemblyName>Labo4</AssemblyName>
+    <RootNamespace>Laborator6</RootNamespace>
+    <AssemblyName>Laborator6</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>labo4.Spirala</StartupObject>
+    <StartupObject>Laborator6.MineSweeper</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,17 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConstruireMatrici.cs" />
-    <Compile Include="MatriceDeNumerePrime.cs" />
-    <Compile Include="OperatiiCuMatrici.cs" />
-    <Compile Include="Spirala.cs" />
+    <Compile Include="36.cs" />
+    <Compile Include="37.cs" />
+    <Compile Include="MineSweeper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Matrice.txt" />
+    <None Include="date.in" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

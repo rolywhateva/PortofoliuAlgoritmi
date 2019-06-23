@@ -8,7 +8,7 @@ namespace PortofoliuAlgoritmi
 {
     class NumerePrime
     {
-        static bool Prim1( int n)
+        static bool Prim1(int n)
         {
             if (n < 2) return false;
             for (int i = 2; i < n; i++)
@@ -44,17 +44,20 @@ namespace PortofoliuAlgoritmi
                     return false;
             return true;
         }
-        }
-        static void Main()
-        {
-            Console.WriteLine(Prim1(13));
-            Console.WriteLine(Prim2(13));
-            Console.WriteLine(Prim3(13));
-            Console.WriteLine(Prim4(13));
-            Console.WriteLine(Prim4(9));
-            Console.ReadKey();
+    
+    static void Main()
+    {
+        Console.WriteLine(Prim1(13));
+        Console.WriteLine(Prim2(13));
+        Console.WriteLine(Prim3(13));
+        Console.WriteLine(Prim4(13));
+        Console.WriteLine(Prim4(9));
+        Console.ReadKey();
 
-            return;
-        }
+        return;
     }
 }
+}
+
+    
+

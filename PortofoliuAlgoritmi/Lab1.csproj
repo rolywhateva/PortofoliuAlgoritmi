@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>PortofoliuAlgoritmi.secventa</StartupObject>
+    <StartupObject>PortofoliuAlgoritmi.ElementeIdentice</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

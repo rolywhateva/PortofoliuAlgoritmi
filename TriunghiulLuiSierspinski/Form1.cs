@@ -57,7 +57,7 @@ namespace TriunghiulLuiSierspinski
         }
         public void Sierspinski(PointF A,PointF B, PointF C)
         {
-            if(Distance(A,B)>=1)
+            if(Distance(A,B)>=0.1)
             {
                 PointF mAB = PunctRaport(A, B);
                 PointF mBC = PunctRaport(B, C);
