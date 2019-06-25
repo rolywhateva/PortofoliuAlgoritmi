@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{58DDBE50-15CD-44E3-B599-ADE925B46B21}</ProjectGuid>
+    <ProjectGuid>{2478E42C-8FC8-49E2-8820-F948E2E3E9D8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Laborator9</RootNamespace>
-    <AssemblyName>Laborator9</AssemblyName>
+    <RootNamespace>Laboratorul7</RootNamespace>
+    <AssemblyName>Laboratorul7</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Laborator9.BacktrackingGeneralizat</StartupObject>
+    <StartupObject>Laboratorul7.Quicksortcs</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,18 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aranjamente.cs" />
-    <Compile Include="BacktrackingGeneralizat.cs" />
-    <Compile Include="Combinari.cs" />
-    <Compile Include="Partitii.cs" />
-    <Compile Include="Permutarics.cs" />
-    <Compile Include="Submultimi.cs" />
+    <Compile Include="MonteCarlo.cs" />
+    <Compile Include="PatratulMagic.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegineDame.cs" />
+    <Compile Include="Quicksortcs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Date.in" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
