@@ -19,7 +19,7 @@ namespace PortofoliuAlgoritmi
          * Să se verifice dacă valorile pot fi elementele consecutive ale unei 
          * progresii aritmetice cu raţia 1.
          * 
-         * 
+         * fgfgdfgdfgdfg
          * 
          * */
         static void Main(string[] args)

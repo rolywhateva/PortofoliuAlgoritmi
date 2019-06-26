@@ -27,9 +27,9 @@ void add(nod *&cap, int val)
 	nod *nou = new nod;
 	nod *last = cap->st;
 	nou->info = val;
-	nou->dr = cap;
 	nou->st = last;
-	last->dr = cap;
+	nou->dr = cap;
+	last->dr = nou;
 	cap->st = nou;
 
 
@@ -48,6 +48,18 @@ void view(nod *cap)
 	} while (p!= cap);
 	cout << endl;
 }
+void del (nod *&cap)
+{
+	nod *last = cap->st;
+	last->dr = cap->dr;
+	cap->dr->st = last;
+	nod *temp = cap;
+	cap = cap->st;
+	delete temp;
+	
+
+
+}
 int main()
 {
 	
@@ -58,13 +70,13 @@ int main()
 	nod *cap = NULL;
 	for (int i = 1; i <= n; i++)
 		add(cap, i);
-	view(cap);
 	
 
 	int count = n;
 	int counter = 1, c = 0;
 	nod *p = cap;
 	view(cap);
+	
 	while (count > 1)
 	{
 		p = p->dr;
@@ -72,12 +84,38 @@ int main()
 		c++;
 		if (c >= counter)
 		{
-			p->st->dr = p->dr;
-			p->dr->st = p->st;
+		
+			if (p == cap)
+			{
+				nod *temp = cap;
+				cap->st->dr = cap->dr;
+				cap->dr->st = cap->st;
+				cap = cap->dr;
+				p = cap;
+				delete temp;
+			}
+			else 
+				/*
+			if (p->dr == cap)
+			{
+				nod *temp = p;
+				cap->dr = p->st;
+				p->st->dr = cap;
+				p->st->st = cap;
+				p = cap;
+				delete temp;
+
+			}
+			else
+			*/
+			del(p);
+			
 			view(cap);
 			count--;
 			counter++;
 			c = 0;
+		
+		
 		}
 	}
 	
