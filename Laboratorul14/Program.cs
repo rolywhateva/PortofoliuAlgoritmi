@@ -44,7 +44,7 @@ namespace Laboratorul14
             b[startx, starty] = true;
             coada.Add(new Data(startx, starty, 1));
             a[startx, starty] = 1;
-            Adancime(a, b);
+             Latime(a, b);
             Console.WriteLine("=====================");
             Afisare(a);
             Console.WriteLine("======================");
@@ -69,7 +69,7 @@ namespace Laboratorul14
                 Console.WriteLine();
             }
         }
-        private static void Adancime(int[,] a, bool[,] b)
+        private static void Latime(int[,] a, bool[,] b)
         {
             while (coada.n != 0)
             {
